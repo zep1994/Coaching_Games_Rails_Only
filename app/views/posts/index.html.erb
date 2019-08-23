@@ -1,0 +1,3 @@
+<% @posts.each do |post| %>
+  <div><%= link_to post.time, post_path(post.id) %></div>
+<% end %>
