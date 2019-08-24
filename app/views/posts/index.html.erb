@@ -1,3 +1,5 @@
 <% @posts.each do |post| %>
   <div><%= link_to post.time, post_path(post.id) %></div>
+  <div><%= link_to post.cost, post_path(post.id) %></div>
+  <div><%= link_to post.coach, post_path(post.id) %></div>
 <% end %>

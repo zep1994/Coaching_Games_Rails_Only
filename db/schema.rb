@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 2019_08_23_001142) do
   enable_extension "plpgsql"
 
   create_table "posts", force: :cascade do |t|
-    t.string "time"
-    t.string "cost"
+    t.integer "time"
+    t.integer "cost"
     t.string "coach"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
