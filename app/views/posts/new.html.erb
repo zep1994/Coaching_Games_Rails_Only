@@ -1,14 +1,12 @@
-<form action="/posts" accept-charset="UTF-8" method="post">
-  <label>Post time:</label><br>
-  <input type="integer" id="post_time" name="post[time]"><br>
- 
-  <label>Post cost:</label><br>
-  <textarea type="integer" id="post_cost" name="post[cost]"></textarea><br>
+<%= form_tag posts_path do %>
+    <label>Post time:</label><br>
+    <%= number_field_tag :'post[time]' %><br>
 
-  <label>Post Coach:</label><br />
-  <textarea id="post_coach" name="post[coach"]></textarea><br />
- 
-  <input type="submit" value="Submit Post">
-</form>
- 
-<%= params.inspect %>
+    <label>Post cost:</label><br>
+    <%= number_field_tag :'post[cost]' %><br>
+
+    <label>Post coach:</label><br>
+    <%= text_field_tag :'post[coach]' %><br>
+
+    <%= submit_tag "Submit Post" %>
+<% end %>
